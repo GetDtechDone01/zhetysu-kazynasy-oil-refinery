@@ -62,7 +62,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#181418] via-[#181418]/70 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#181418] via-transparent to-[#181418]/30" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-px bg-[#a93134]" />
@@ -77,11 +77,11 @@ export default function Home() {
               LLP "Zhetysu Kazynasy" is a premier oil refinery operating enterprise producing crude oil 
               and associated gas in the Almaty Region of Kazakhstan.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/service" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#a93134] hover:bg-[#c0404a] text-white font-semibold rounded-full transition-all duration-200 hover:shadow-xl hover:shadow-[#a93134]/30 hover:-translate-y-0.5">
-                Our Services <ArrowRight size={18} />
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Link to="/service" className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-[#a93134] hover:bg-[#c0404a] text-white font-semibold text-sm rounded-full transition-all duration-200 hover:shadow-xl hover:shadow-[#a93134]/30 hover:-translate-y-0.5">
+                Our Services <ArrowRight size={16} />
               </Link>
-              <Link to="/about" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 hover:border-[#a93134]/60 text-white hover:text-[#a93134] font-semibold rounded-full transition-all duration-200 hover:bg-[#a93134]/10">
+              <Link to="/about" className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 border border-white/20 hover:border-[#a93134]/60 text-white hover:text-[#a93134] font-semibold text-sm rounded-full transition-all duration-200 hover:bg-[#a93134]/10">
                 Learn About Us
               </Link>
             </div>

@@ -30,7 +30,7 @@ export default function Navbar() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
       scrolled ? 'bg-[#181418]/95 backdrop-blur-md shadow-lg shadow-black/30 border-b border-[#a93134]/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +52,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-1 relative z-50">
             {links.map(({ path, label }) =>
               label === 'Request Service' ? (
                 <Link
@@ -92,7 +92,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-[#181418]/98 border-t border-[#a93134]/20 py-4">
+          <div className="md:hidden bg-[#181418]/98 border-t border-[#a93134]/20 py-4 relative z-50">
             {links.map(({ path, label }) => (
               <Link
                 key={path}
