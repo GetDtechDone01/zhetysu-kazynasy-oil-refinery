@@ -5,6 +5,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+import Home from './pages/Home';
+import About from './pages/About';
+import Service from './pages/Service';
+import RequestService from './pages/RequestService';
+import ThankYou from './pages/ThankYou';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -33,7 +38,11 @@ const AuthenticatedApp = () => {
   // Render the main app
   return (
     <Routes>
-      {/* Add your page Route elements here */}
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/service" element={<Service />} />
+      <Route path="/request-service" element={<RequestService />} />
+      <Route path="/thank-you" element={<ThankYou />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

@@ -1,0 +1,69 @@
+{
+  "name": "ServiceRequest",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Full name of the person submitting the request"
+    },
+    "company_name": {
+      "type": "string",
+      "description": "Name of the company"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country of the requester"
+    },
+    "service_type": {
+      "type": "string",
+      "enum": [
+        "EN590 ULSD",
+        "D2 Diesel Gas Oil",
+        "Urea Fertiliser",
+        "D6 Virgin Fuel Oil",
+        "Liquefied Petroleum Gas",
+        "Kazakhstan Crude Oil (KEBCO)",
+        "Fuel Oil",
+        "CST-180",
+        "Bitumen 60/70 & 80/100",
+        "Jet A1 Fuel",
+        "Aviation Kerosene (JP54)",
+        "Other"
+      ],
+      "description": "Type of service or product requested"
+    },
+    "quantity": {
+      "type": "string",
+      "description": "Quantity or volume required"
+    },
+    "message": {
+      "type": "string",
+      "description": "Detailed message or additional requirements"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "reviewing",
+        "responded",
+        "closed"
+      ],
+      "default": "new",
+      "description": "Status of the service request"
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "service_type",
+    "message"
+  ]
+}
