@@ -51,74 +51,82 @@ export default function RequestService() {
     <div className="min-h-screen bg-[#181418] text-white">
       <Navbar />
 
-      <section className="pt-32 pb-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-px bg-[#a93134]" />
-            <span className="text-[#a93134] text-xs tracking-[0.3em] uppercase font-semibold">Request Service</span>
-            <div className="w-8 h-px bg-[#a93134]" />
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-black font-['Playfair_Display'] mb-4">
-            Get In <span className="text-[#a93134]">Touch</span>
-          </h1>
-          <p className="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
-            Fill in the form below or write us directly at our email address. A representative will respond to your enquiry within 24 hours.
-          </p>
-        </div>
-      </section>
+      {/* HERO + CONTACT */}
+      <section className="relative pt-0 pb-0 overflow-hidden">
+        <div className="relative h-[480px] sm:h-[520px] flex items-end">
+          {/* Background image */}
+          <img
+            src="https://media.base44.com/images/public/6a106c8a1a9a374d55e747f9/f7424faa9_image.png"
+            alt="Oil Refinery"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#181418] via-[#181418]/50 to-[#181418]/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#181418]/60 via-transparent to-transparent" />
 
-      {/* CONTACT CARD */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[
-              {
-                icon: MapPin,
-                title: "Address",
-                lines: [
-                  "050012, Almaty",
-                  "Nursultan Nazarbayev Ave.",
-                  "Furmanova, 177, apt. 7",
-                  "Almaty District, Kazakhstan",
-                ],
-              },
-              {
-                icon: Mail,
-                title: "Email Us",
-                lines: ["info@zhetysukazynasy.kz"],
-                link: "mailto:info@zhetysukazynasy.kz",
-              },
-              {
-                icon: Phone,
-                title: "Call Us",
-                lines: ["+7 (727) 300-00-00"],
-                link: "tel:+77273000000",
-              },
-            ].map((card) => (
-              <div key={card.title} className="bg-[#0f0d0f] border border-[#4a444d]/30 hover:border-[#a93134]/40 rounded-xl p-6 transition-colors flex flex-col items-start gap-4">
-                <div className="w-11 h-11 bg-[#a93134]/15 rounded-full flex items-center justify-center border border-[#a93134]/30">
-                  <card.icon size={20} className="text-[#a93134]" />
+          {/* Title centered */}
+          <div className="absolute inset-0 flex items-center justify-center flex-col px-4 pt-20">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-8 h-px bg-[#a93134]" />
+              <span className="text-[#a93134] text-xs tracking-[0.3em] uppercase font-semibold">Request Service</span>
+              <div className="w-8 h-px bg-[#a93134]" />
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-black font-['Playfair_Display'] mb-4 text-white text-center drop-shadow-lg">
+              Get In <span className="text-[#a93134]">Touch</span>
+            </h1>
+            <p className="text-gray-300 max-w-xl mx-auto text-sm leading-relaxed text-center drop-shadow">
+              Fill in the form below or write us directly at our email address. A representative will respond to your enquiry within 24 hours.
+            </p>
+          </div>
+
+          {/* Single contact card pinned to bottom */}
+          <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 pb-0 -mb-16">
+            <div className="max-w-3xl mx-auto">
+              <div className="bg-[#0f0d0f]/95 backdrop-blur-sm border border-[#4a444d]/40 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10 shadow-2xl shadow-black/60">
+                {/* Address */}
+                <div className="flex items-start gap-4 flex-1 min-w-0">
+                  <div className="w-10 h-10 bg-[#a93134]/15 rounded-full flex items-center justify-center border border-[#a93134]/30 flex-shrink-0">
+                    <MapPin size={17} className="text-[#a93134]" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-xs mb-1 tracking-widest uppercase">Address</h3>
+                    <p className="text-gray-400 text-xs leading-relaxed">050012, Almaty, Nursultan Nazarbayev Ave.<br />Furmanova, 177, apt. 7, Kazakhstan</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-white font-bold text-sm mb-2 tracking-wide uppercase">{card.title}</h3>
-                  {card.link ? (
-                    <a href={card.link} className="text-[#a93134] hover:text-white text-sm transition-colors font-medium">
-                      {card.lines[0]}
+                <div className="hidden sm:block w-px h-12 bg-[#4a444d]/40 flex-shrink-0" />
+                {/* Email */}
+                <div className="flex items-start gap-4 flex-1 min-w-0">
+                  <div className="w-10 h-10 bg-[#a93134]/15 rounded-full flex items-center justify-center border border-[#a93134]/30 flex-shrink-0">
+                    <Mail size={17} className="text-[#a93134]" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-xs mb-1 tracking-widest uppercase">Email Us</h3>
+                    <a href="mailto:info@zhetysukazynasy.kz" className="text-[#a93134] hover:text-white text-xs transition-colors font-medium">
+                      info@zhetysukazynasy.kz
                     </a>
-                  ) : (
-                    card.lines.map((line, i) => (
-                      <p key={i} className="text-gray-400 text-xs leading-relaxed">{line}</p>
-                    ))
-                  )}
+                  </div>
+                </div>
+                <div className="hidden sm:block w-px h-12 bg-[#4a444d]/40 flex-shrink-0" />
+                {/* Phone */}
+                <div className="flex items-start gap-4 flex-1 min-w-0">
+                  <div className="w-10 h-10 bg-[#a93134]/15 rounded-full flex items-center justify-center border border-[#a93134]/30 flex-shrink-0">
+                    <Phone size={17} className="text-[#a93134]" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-xs mb-1 tracking-widest uppercase">Call Us</h3>
+                    <a href="tel:+77273000000" className="text-[#a93134] hover:text-white text-xs transition-colors font-medium">
+                      +7 (727) 300-00-00
+                    </a>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* FORM */}
-      <section className="py-10 px-4 sm:px-6 lg:px-8 pb-24">
+      <section className="pt-24 pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="bg-[#0f0d0f] border border-[#4a444d]/30 rounded-2xl p-8 sm:p-10">
             <div className="mb-8">
