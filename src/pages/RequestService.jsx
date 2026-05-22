@@ -51,73 +51,84 @@ export default function RequestService() {
     <div className="min-h-screen bg-[#181418] text-white">
       <Navbar />
 
-      {/* HERO + CONTACT */}
-      <section className="relative pt-0 pb-0 overflow-hidden">
-        <div className="relative h-[480px] sm:h-[520px] flex items-end">
-          {/* Background image */}
+      {/* HERO IMAGE */}
+      <section className="relative pt-0 overflow-hidden">
+        <div className="relative h-[400px] sm:h-[450px]">
           <img
             src="https://media.base44.com/images/public/6a106c8a1a9a374d55e747f9/f7424faa9_image.png"
             alt="Oil Refinery"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          {/* Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#181418] via-[#181418]/50 to-[#181418]/30" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#181418]/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#181418]/70 via-[#181418]/20 to-[#181418]/80" />
+        </div>
+      </section>
 
-          {/* Title centered */}
-          <div className="absolute inset-0 flex items-center justify-center flex-col px-4 pt-20">
+      {/* TITLE + CONTACT CARD */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#181418]">
+        <div className="max-w-3xl mx-auto">
+          {/* Title block */}
+          <div className="text-center mb-10">
             <div className="flex items-center justify-center gap-3 mb-4">
               <div className="w-8 h-px bg-[#a93134]" />
               <span className="text-[#a93134] text-xs tracking-[0.3em] uppercase font-semibold">Request Service</span>
               <div className="w-8 h-px bg-[#a93134]" />
             </div>
-            <h1 className="text-4xl sm:text-5xl font-black font-['Playfair_Display'] mb-4 text-white text-center drop-shadow-lg">
+            <h1 className="text-4xl sm:text-5xl font-black font-['Playfair_Display'] mb-4 text-white">
               Get In <span className="text-[#a93134]">Touch</span>
             </h1>
-            <p className="text-gray-300 max-w-xl mx-auto text-sm leading-relaxed text-center drop-shadow">
+            <p className="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
               Fill in the form below or write us directly at our email address. A representative will respond to your enquiry within 24 hours.
             </p>
           </div>
 
-          {/* Single contact card pinned to bottom */}
-          <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 pb-0 -mb-16">
-            <div className="max-w-3xl mx-auto">
-              <div className="bg-[#0f0d0f]/95 backdrop-blur-sm border border-[#4a444d]/40 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10 shadow-2xl shadow-black/60">
-                {/* Address */}
-                <div className="flex items-start gap-4 flex-1 min-w-0">
-                  <div className="w-10 h-10 bg-[#a93134]/15 rounded-full flex items-center justify-center border border-[#a93134]/30 flex-shrink-0">
-                    <MapPin size={17} className="text-[#a93134]" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold text-xs mb-1 tracking-widest uppercase">Address</h3>
-                    <p className="text-gray-400 text-xs leading-relaxed">050012, Almaty, Nursultan Nazarbayev Ave.<br />Furmanova, 177, apt. 7, Kazakhstan</p>
-                  </div>
+          {/* Single unified contact card */}
+          <div className="bg-[#0f0d0f] border border-[#4a444d]/40 rounded-2xl p-6 sm:p-8 shadow-xl shadow-black/40">
+            <div className="flex flex-col sm:flex-row items-start gap-8 sm:gap-6">
+              {/* Address */}
+              <div className="flex items-start gap-4 flex-1">
+                <div className="w-10 h-10 bg-[#a93134]/15 rounded-full flex items-center justify-center border border-[#a93134]/30 flex-shrink-0 mt-0.5">
+                  <MapPin size={17} className="text-[#a93134]" />
                 </div>
-                <div className="hidden sm:block w-px h-12 bg-[#4a444d]/40 flex-shrink-0" />
-                {/* Email */}
-                <div className="flex items-start gap-4 flex-1 min-w-0">
-                  <div className="w-10 h-10 bg-[#a93134]/15 rounded-full flex items-center justify-center border border-[#a93134]/30 flex-shrink-0">
-                    <Mail size={17} className="text-[#a93134]" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold text-xs mb-1 tracking-widest uppercase">Email Us</h3>
-                    <a href="mailto:info@zhetysukazynasy.kz" className="text-[#a93134] hover:text-white text-xs transition-colors font-medium">
-                      info@zhetysukazynasy.kz
-                    </a>
-                  </div>
+                <div>
+                  <h3 className="text-white font-bold text-xs mb-2 tracking-widest uppercase">Address</h3>
+                  <p className="text-gray-400 text-xs leading-relaxed">
+                    050012, Almaty<br />
+                    Nursultan Nazarbayev Ave.<br />
+                    Furmanova, 177, apt. 7<br />
+                    Almaty District, Kazakhstan
+                  </p>
                 </div>
-                <div className="hidden sm:block w-px h-12 bg-[#4a444d]/40 flex-shrink-0" />
-                {/* Phone */}
-                <div className="flex items-start gap-4 flex-1 min-w-0">
-                  <div className="w-10 h-10 bg-[#a93134]/15 rounded-full flex items-center justify-center border border-[#a93134]/30 flex-shrink-0">
-                    <Phone size={17} className="text-[#a93134]" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold text-xs mb-1 tracking-widest uppercase">Call Us</h3>
-                    <a href="tel:+77273000000" className="text-[#a93134] hover:text-white text-xs transition-colors font-medium">
-                      +7 (727) 300-00-00
-                    </a>
-                  </div>
+              </div>
+
+              <div className="hidden sm:block w-px self-stretch bg-[#4a444d]/40 flex-shrink-0" />
+              <div className="block sm:hidden w-full h-px bg-[#4a444d]/40" />
+
+              {/* Email */}
+              <div className="flex items-start gap-4 flex-1">
+                <div className="w-10 h-10 bg-[#a93134]/15 rounded-full flex items-center justify-center border border-[#a93134]/30 flex-shrink-0 mt-0.5">
+                  <Mail size={17} className="text-[#a93134]" />
+                </div>
+                <div>
+                  <h3 className="text-white font-bold text-xs mb-2 tracking-widest uppercase">Email Us</h3>
+                  <a href="mailto:info@zhetysukazynasy.kz" className="text-[#a93134] hover:text-white text-xs transition-colors font-medium break-all">
+                    info@zhetysukazynasy.kz
+                  </a>
+                </div>
+              </div>
+
+              <div className="hidden sm:block w-px self-stretch bg-[#4a444d]/40 flex-shrink-0" />
+              <div className="block sm:hidden w-full h-px bg-[#4a444d]/40" />
+
+              {/* Phone */}
+              <div className="flex items-start gap-4 flex-1">
+                <div className="w-10 h-10 bg-[#a93134]/15 rounded-full flex items-center justify-center border border-[#a93134]/30 flex-shrink-0 mt-0.5">
+                  <Phone size={17} className="text-[#a93134]" />
+                </div>
+                <div>
+                  <h3 className="text-white font-bold text-xs mb-2 tracking-widest uppercase">Call Us</h3>
+                  <a href="tel:+77273000000" className="text-[#a93134] hover:text-white text-xs transition-colors font-medium">
+                    +7 (727) 300-00-00
+                  </a>
                 </div>
               </div>
             </div>
@@ -126,7 +137,7 @@ export default function RequestService() {
       </section>
 
       {/* FORM */}
-      <section className="pt-24 pb-24 px-4 sm:px-6 lg:px-8">
+      <section className="pt-0 pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="bg-[#0f0d0f] border border-[#4a444d]/30 rounded-2xl p-8 sm:p-10">
             <div className="mb-8">
