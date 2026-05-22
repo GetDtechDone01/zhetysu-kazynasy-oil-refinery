@@ -91,9 +91,7 @@ export default function Footer() {
           <p className="text-gray-500 text-xs text-center">
             © {new Date().getFullYear()} LLP "ZHETYSU KAZYNASY" OIL REFINERY. All rights reserved.
           </p>
-          <p className="text-gray-600 text-xs">
-            OKED: Crude oil and associated gas production
-          </p>
+
         </div>
       </div>
     </footer>

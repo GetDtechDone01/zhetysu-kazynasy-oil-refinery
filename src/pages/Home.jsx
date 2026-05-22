@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, Shield, Leaf, Users, Award, Star, ChevronRight
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
+import TestimonialsCarousel from '../components/TestimonialsCarousel';
 
 const HERO_IMG = "https://media.base44.com/images/public/6a106c8a1a9a374d55e747f9/17cd08a4f_generated_f2de4b81.png";
 const ABOUT_IMG = "https://media.base44.com/images/public/6a106c8a1a9a374d55e747f9/d8d8f719b_generated_e0ee86d0.png";
@@ -29,26 +30,7 @@ const STATS = [
   { value: "ISO", label: "Certified Standards" },
 ];
 
-const TESTIMONIALS = [
-  {
-    name: "Aibek Dzhaksybekov",
-    role: "Director, KazMunaiGas Partner",
-    text: "Zhetysu Kazynasy has been a reliable partner in our supply chain. Their commitment to product quality and on-time delivery is unmatched in the region.",
-    stars: 5,
-  },
-  {
-    name: "Sergei Morozov",
-    role: "Operations Manager, Central Asia Energy",
-    text: "Professional, transparent, and highly competent. Working with Zhetysu Kazynasy gives us the confidence we need in our petroleum product procurement.",
-    stars: 5,
-  },
-  {
-    name: "Dinara Bekova",
-    role: "Procurement Head, Almaty Industries",
-    text: "Their product range is exceptional. From crude oil to refined petroleum products, they consistently deliver to specification. Highly recommended.",
-    stars: 5,
-  },
-];
+
 
 export default function Home() {
   return (
@@ -231,42 +213,7 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-24 bg-[#0f0d0f] px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-px bg-[#a93134]" />
-              <span className="text-[#a93134] text-xs tracking-[0.3em] uppercase font-semibold">Client Testimonials</span>
-              <div className="w-8 h-px bg-[#a93134]" />
-            </div>
-            <h2 className="text-4xl font-black font-['Playfair_Display'] mb-4">
-              What Our <span className="text-[#a93134]">Clients Say</span>
-            </h2>
-            <p className="text-gray-400 max-w-xl mx-auto text-sm">Trusted by leading energy companies and industrial enterprises across Kazakhstan and Central Asia.</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t) => (
-              <div key={t.name} className="bg-[#181418] border border-[#4a444d]/30 rounded-xl p-7 hover:border-[#a93134]/30 transition-colors duration-300">
-                <div className="flex gap-1 mb-5">
-                  {[...Array(t.stars)].map((_, i) => (
-                    <Star key={i} size={14} className="text-[#a93134] fill-[#a93134]" />
-                  ))}
-                </div>
-                <p className="text-gray-300 text-sm leading-relaxed mb-6 italic">"{t.text}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#a93134]/20 border border-[#a93134]/30 flex items-center justify-center text-[#a93134] font-bold text-sm">
-                    {t.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold text-sm">{t.name}</div>
-                    <div className="text-gray-500 text-xs">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialsCarousel />
 
       {/* CTA */}
       <section className="relative py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
