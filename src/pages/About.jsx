@@ -26,7 +26,7 @@ export default function About() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0">
           <img src={HERO_IMG} alt="Refinery" className="w-full h-full object-cover opacity-25" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#181418]/80 via-[#181418]/60 to-[#181418]" />
@@ -84,9 +84,9 @@ export default function About() {
                 ))}
               </div>
             </div>
-            <div className="relative">
+            <div className="relative mt-8 lg:mt-0">
               <img src={ABOUT2_IMG} alt="Company" className="rounded-xl border border-[#4a444d]/30 w-full aspect-[4/3] object-cover" />
-              <div className="absolute -bottom-6 -left-6 bg-[#3a1016] border border-[#a93134]/30 rounded-xl p-5 shadow-xl max-w-[200px]">
+              <div className="mt-4 bg-[#3a1016] border border-[#a93134]/30 rounded-xl p-5 shadow-xl inline-block">
                 <div className="text-3xl font-black text-[#a93134] font-['Playfair_Display']">20+</div>
                 <div className="text-gray-300 text-xs mt-1">Years of Operational Excellence in Kazakhstan</div>
               </div>

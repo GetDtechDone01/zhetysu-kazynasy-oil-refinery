@@ -52,8 +52,8 @@ export default function RequestService() {
       <Navbar />
 
       {/* HERO IMAGE */}
-      <section className="relative pt-0 overflow-hidden">
-        <div className="relative h-[400px] sm:h-[450px]">
+      <section className="relative pt-20 overflow-hidden">
+        <div className="relative h-[280px] sm:h-[380px] lg:h-[450px]">
           <img
             src="https://media.base44.com/images/public/6a106c8a1a9a374d55e747f9/f7424faa9_image.png"
             alt="Oil Refinery"

@@ -99,7 +99,7 @@ export default function Service() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0">
           <img src={HERO_IMG} alt="Refinery" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#181418]/70 via-[#181418]/60 to-[#181418]" />
