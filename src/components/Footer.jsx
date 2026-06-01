@@ -71,8 +71,8 @@ export default function Footer() {
                 <div className="w-7 h-7 rounded-full bg-[#a93134]/15 flex items-center justify-center flex-shrink-0">
                   <Mail size={13} className="text-[#a93134]" />
                 </div>
-                <a href="mailto:info@zhetysukazynasy.kz" className="text-gray-400 hover:text-[#a93134] text-xs transition-colors">
-                  info@zhetysukazynasy.kz
+                <a href="mailto:info@zhetysukazynasy-oil.kz" className="text-gray-400 hover:text-[#a93134] text-xs transition-colors">
+                  info@zhetysukazynasy-oil.kz
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -91,7 +91,9 @@ export default function Footer() {
           <p className="text-gray-500 text-xs text-center">
             © {new Date().getFullYear()} LLP "ZHETYSU KAZYNASY" OIL REFINERY. All rights reserved.
           </p>
-
+          <a href="https://www.zhetysukazynasy-oil.kz" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#a93134] text-xs transition-colors">
+            www.zhetysukazynasy-oil.kz
+          </a>
         </div>
       </div>
     </footer>

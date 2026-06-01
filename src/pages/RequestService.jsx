@@ -110,8 +110,8 @@ export default function RequestService() {
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-xs mb-2 tracking-widest uppercase">Email Us</h3>
-                  <a href="mailto:info@zhetysukazynasy.kz" className="text-[#a93134] hover:text-white text-xs transition-colors font-medium break-all">
-                    info@zhetysukazynasy.kz
+                  <a href="mailto:info@zhetysukazynasy-oil.kz" className="text-[#a93134] hover:text-white text-xs transition-colors font-medium break-all">
+                    info@zhetysukazynasy-oil.kz
                   </a>
                 </div>
               </div>
