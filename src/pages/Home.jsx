@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
+import ExchangeTicker from '../components/ExchangeTicker';
 
 const HERO_IMG = "https://media.base44.com/images/public/6a106c8a1a9a374d55e747f9/17cd08a4f_generated_f2de4b81.png";
 const ABOUT_IMG = "https://media.base44.com/images/public/6a106c8a1a9a374d55e747f9/d8d8f719b_generated_e0ee86d0.png";
@@ -86,6 +87,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ExchangeTicker />
 
       {/* ABOUT BRIEF */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">

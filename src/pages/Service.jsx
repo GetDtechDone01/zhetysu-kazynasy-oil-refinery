@@ -3,6 +3,7 @@ import { ChevronRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
+import ExchangeTicker from '../components/ExchangeTicker';
 
 const HERO_IMG = "https://media.base44.com/images/public/6a106c8a1a9a374d55e747f9/aff65ea81_generated_a5caabec.png";
 
@@ -118,6 +119,8 @@ export default function Service() {
           </p>
         </div>
       </section>
+
+      <ExchangeTicker />
 
       {/* PRODUCTS GRID */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">

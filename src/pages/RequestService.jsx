@@ -126,8 +126,8 @@ export default function RequestService() {
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-xs mb-2 tracking-widest uppercase">Call Us</h3>
-                  <a href="tel:+77273000000" className="text-[#a93134] hover:text-white text-xs transition-colors font-medium">
-                    +7 (727) 300-00-00
+                  <a href="tel:+77470524475" className="text-[#a93134] hover:text-white text-xs transition-colors font-medium">
+                    +7 747 052 4475
                   </a>
                 </div>
               </div>
