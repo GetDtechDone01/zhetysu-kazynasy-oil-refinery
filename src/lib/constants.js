@@ -17,6 +17,7 @@ export const COMPANY = {
     'Almaty District, Kazakhstan',
   ],
   email: 'info@zhetysukazynasy-oil.kz',
+  salesEmail: 'sales@zhetysukazynasy-oil.com',
   phone: '+7 747 052 4475',
   phoneTel: '+77470524475',
   website: 'www.zhetysukazynasy-oil.kz',

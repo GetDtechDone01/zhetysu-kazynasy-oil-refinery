@@ -136,6 +136,12 @@ export default function RequestService() {
                   >
                     {COMPANY.email}
                   </a>
+                  <a
+                    href={`mailto:${COMPANY.salesEmail}`}
+                    className="block mt-2 text-[#a93134] hover:text-white text-xs transition-colors font-medium break-all"
+                  >
+                    {COMPANY.salesEmail}
+                  </a>
                 </div>
               </div>
 

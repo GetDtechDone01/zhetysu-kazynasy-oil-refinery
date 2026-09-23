@@ -101,6 +101,15 @@ export default function Footer() {
                   {COMPANY.email}
                 </a>
               </li>
+              <li className="flex items-center gap-3">
+                <div className="w-7 h-7 flex-shrink-0" />
+                <a
+                  href={`mailto:${COMPANY.salesEmail}`}
+                  className="text-gray-400 hover:text-[#a93134] text-xs transition-colors break-all"
+                >
+                  {COMPANY.salesEmail}
+                </a>
+              </li>
 
               {/* Phone */}
               <li className="flex items-center gap-3">
