@@ -185,7 +185,7 @@ export default function RequestService() {
             {submitted && (
               <div className="mb-6 p-4 bg-green-900/30 border border-green-500/30 rounded-xl text-green-400 text-sm">
                 ✓ Your email client should have opened with the request pre-filled. If not, please email us directly at{' '}
-                <a href={`mailto:${COMPANY.email}`} className="underline">{COMPANY.email}</a>.
+                <a href={`mailto:${COMPANY.salesEmail}`} className="underline">{COMPANY.salesEmail}</a>.
               </div>
             )}
 
