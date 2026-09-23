@@ -95,8 +95,17 @@ export default function Footer() {
                   <Mail size={13} className="text-[#a93134]" />
                 </div>
                 <a
+                  href={`mailto:${COMPANY.salesEmail}`}
+                  className="text-gray-400 hover:text-[#a93134] text-xs transition-colors break-all"
+                >
+                  {COMPANY.salesEmail}
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-7 h-7 flex-shrink-0" />
+                <a
                   href={`mailto:${COMPANY.email}`}
-                  className="text-gray-400 hover:text-[#a93134] text-xs transition-colors"
+                  className="text-gray-400 hover:text-[#a93134] text-xs transition-colors break-all"
                 >
                   {COMPANY.email}
                 </a>
@@ -104,10 +113,10 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <div className="w-7 h-7 flex-shrink-0" />
                 <a
-                  href={`mailto:${COMPANY.salesEmail}`}
+                  href={`mailto:${COMPANY.accountsEmail}`}
                   className="text-gray-400 hover:text-[#a93134] text-xs transition-colors break-all"
                 >
-                  {COMPANY.salesEmail}
+                  {COMPANY.accountsEmail}
                 </a>
               </li>
 
