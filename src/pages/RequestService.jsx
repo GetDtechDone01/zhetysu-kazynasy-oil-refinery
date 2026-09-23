@@ -57,7 +57,7 @@ export default function RequestService() {
       form.message,
     ].join('\n');
 
-    const mailto = `mailto:${COMPANY.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:${COMPANY.email}?cc=${encodeURIComponent(COMPANY.salesEmail)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
 
     // Show confirmation banner (email client opening is handled by the OS)
